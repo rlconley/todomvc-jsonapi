@@ -2,6 +2,7 @@ class Api::V1::TodosController < ApplicationController
 
   def index
     @todos = Todo.all
+    render json: @todos
   end
 
   def show
@@ -11,6 +12,7 @@ class Api::V1::TodosController < ApplicationController
 
   def create
     @todo = Todo.new
+    render json: @todo
   end
 
   def update
