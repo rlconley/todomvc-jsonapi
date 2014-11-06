@@ -6,14 +6,11 @@ class Api::V1::TodosController < ApplicationController
 
   def show
     @todo = Todo.find(params[:id])
-    respond_to do |format|
-      format.html
-      format.json { render json: @todo}
-    end
+    JSON.parse(@todo).body
   end
 
   def create
-
+    @todo = Todo.new
   end
 
   def update
@@ -23,4 +20,5 @@ class Api::V1::TodosController < ApplicationController
   def destroy
 
   end
+
 end
