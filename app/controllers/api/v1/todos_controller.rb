@@ -1,10 +1,11 @@
 class Api::V1::TodosController < ApplicationController
-  def index
+
+   def index
     @todos = Todo.all
   end
 
   def show
-    @todo = todo.find(params[:id])
+    @todo = Todo.find(params[:id])
     respond_to do |format|
       format.html
       format.json { render json: @todo}
@@ -12,6 +13,14 @@ class Api::V1::TodosController < ApplicationController
   end
 
   def create
+
+  end
+
+  def update
+
+  end
+
+  def destroy
 
   end
 end
